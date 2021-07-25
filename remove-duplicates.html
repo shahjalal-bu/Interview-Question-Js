@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style></style>
+    <title>Remove duplicates from array in Javascript</title>
+  </head>
+  <body>
+    <p>
+      Four solutions, 
+      1 ) One brute-force method using a for loop, 
+      <pre>
+          <code>
+            let a = [1, 2, 5, 2, 1, 8];
+            let b =[];
+            a.forEach((item) =>{
+              if(b.indexOf(item) === -1){
+                 b.push(item)
+              }
+            } 
+            )
+          </code>
+      </pre>
+      2)sort and
+      remove, 
+        <pre>
+            <code>
+                let a = [1, 2, 5, 2, 1, 8];
+                let b=[];
+                a.sort(); 
+                let temp;     
+                a.forEach((item) =>{
+                    if(item !== temp){
+                        b.push(item)
+                        temp = item;
+                  
+                    }
+                })
+          
+                console.log(b);
+            </code>
+        </pre>
+      3) using JavaScript Objects and 
+
+      <pre>
+          <code>
+            let a = [1, 2, 5, 2, 1, 8];
+            let obj = {};
+            for(let i of a){
+                obj[i] = 123;
+            }
+            console.log(obj);
+            let num =Object.keys(obj)
+            console.log(num);
+          </code>
+      </pre>
+      
+      4) Using ES6 / ES2015 Sets.
+
+      <code>
+          <pre>
+            let a = [1, 2, 5, 2, 1, 8];
+            let b = [...new Set(a)];
+     
+            console.log(b);
+          </pre>
+      </code>
+    </p>
+
+    <script>
+    
+    </script>
+  </body>
+</html>
