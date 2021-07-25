@@ -11,5 +11,28 @@
       <li><a href="remove-duplicates.html">Remove Dupticate from array</a></li>
       <li><a href="shuffle-an-array.html">Suffle an array</a></li>
     </ol>
+
+    <h2>Source Code</h2>
+    <pre>
+      <code style="color: violet;">
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      let arrayShuffle = function () {
+        for (const key in numbers) {
+            let random = Math.floor(Math.random() * numbers.length)
+            
+            //swap
+
+            var b = numbers[key];
+            numbers[key] = numbers[random];
+            numbers[random]= b;  
+
+          
+        }
+        document.querySelector('#output').innerText = numbers;
+      }
+      document.querySelector('#output').innerText = numbers;
+      </code>
+    </pre>
   </body>
 </html>
