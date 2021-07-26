@@ -5,7 +5,8 @@
     <title>Remove duplicates from array in Javascript</title>
   </head>
   <body>
-    <p>
+    <button onclick="removeDup()">Remove Duplicate</button>
+    <!-- <p>
       Four solutions, 
       1 ) One brute-force method using a for loop, 
       <pre>
@@ -64,9 +65,26 @@
             console.log(b);
           </pre>
       </code>
-    </p>
+    </p> -->
 
-    <script>
+    <script> 
+    let a = [1, 2, 5, 2, 1, 8];
+      let b =[];
+      function removeDup(){
+        a.forEach((item) =>{
+        if(b.indexOf(item) === -1){
+           b.push(item)
+        }
+      } 
+      )
+      document.write(`<h2>Final array</h2> : ${b}`)
+      }
+      document.write(`<h2>Original array</h2> : ${a}`)
+      
+      
+
+
+      
     
     </script>
   </body>

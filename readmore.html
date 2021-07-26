@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ccc;
+        }
+        .imgBox img{
+            width: 100%;
+        }
+        .card{
+            width: 30%;
+            text-align: justify;
+            box-shadow: 5px 5px 10px lightblue;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            padding-bottom: 10px;
+        }
+        .text{
+            padding: 8px;
+        }
+        button{
+            padding: 10px 20px;
+            margin-left: 5px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px lightblue;
+        }
+        .more-text{
+           display: none;
+        }
+        .see-more .more-text{
+            display: inline;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+       <div class="imgBox"> <img src="https://images.prothomalo.com/prothomalo-bangla%2F2021-07%2Fc904b109-4224-4f12-9b0b-1307e2943c6a%2F20210725_TITO_0005072703.jpg?auto=format%2Ccompress&format=webp&w=700&dpr=1.0" alt=""></div>
+       <div class="text">
+           করোনাভাইরাসের সংক্রমণ ঠেকাতে কঠোর বিধিনিষেধের চতুর্থ দিনে আজ সোমবার রাজধানীতে কড়াকড়ি অবস্থানে রয়েছে আইনশৃঙ্খলা রক্ষাকারী বাহিনী। তবে এদিন অন্যান্য <span class="more-text">দিনের তুলনায় সাধারণ মানুষের ভিড় কিছুটা বেড়েছে। ব্যক্তিগত গাড়ির চাপও
+           
+           <p> কিছুটা বেড়েছে বলে জানিয়েছেন মাঠপর্যায়ে দায়িত্ব পালনকারী পুলিশ সদস্যরা। রাজধানীর বনানী, মহাখালী, তেজগাঁও, বিজয় সরণি, ফার্মগেট, বাংলামোটর ও মগবাজার এলাকা ঘুরে এমন চিত্র দেখা গেছে।</p>
+
+           <p> তেজগাঁও সাতরাস্তার কাছে বিজিপ্রেসের সামনের চেকপোস্টে দায়িত্ব পালনরত তেজগাঁও ট্রাফিক বিভাগের সার্জেন্ট মো. উজ্জ্বল হোসেন বেলা সাড়ে ১১টার দিকে প্রথম আলোকে বলেন, সকাল নয়টার পর থেকে মানুষের চলাচল বেড়েছে। যাঁরা বের হচ্ছেন, অধিকাংশই রোগী বা রোগীর স্বজন পরিচয় দিচ্ছেন। কেউ কেউ কোভিড-১৯-এর টিকা বা পরীক্ষার জন্য বের হয়েছেন বলেও জানাচ্ছেন। </p>
+           </span>  
+       </div>
+        <button class="read-more-btn">Read More</button>
+    </div>
+    
+<script>
+    let btn = document.querySelector('.read-more-btn');
+    btn.addEventListener('click', function (e) {
+        document.querySelector('.text')
+        .classList.toggle('see-more');
+        if(btn.innerHTML === "Read More"){
+            btn.innerHTML = "See Less"
+        }else{
+            btn.innerHTML = "Read More"
+        }
+    });
+</script>
+</body>
+</html>
